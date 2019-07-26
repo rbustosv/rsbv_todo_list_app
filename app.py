@@ -9,7 +9,7 @@ app = Flask(__name__)
 heroku = Heroku(app)
 
 basedir= os.path.abspath(os.path.dirname(__file__))
-app.config["SQLALCHEMY_DATABASE_URI"]= "sqlite:///" + os.path.join(basedir,"app.sqlite")
+app.config["SQLALCHEMY_DATABASE_URI"]= "postgres://lkkgetbhmgolqx:f4cb5a99438eee0e6394cdf1fb3fb22b553b5bd351ce350a6e3a22d981dbf51a@ec2-54-235-92-43.compute-1.amazonaws.com:5432/dcq3jo2l305n3c"
 
 CORS(app)#Make sure our app does not have errors
 db= SQLAlchemy(app)
